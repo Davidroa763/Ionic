@@ -7,5 +7,18 @@
 </ion-header>
 
 <ion-content padding>
-  <h2>Soy La Pagina</h2>
+    <ion-card>
+        <ion-card-header>
+            Mi Primera Lista
+        </ion-card-header>
+    
+        <ion-list>
+
+          <button ion-item *ngFor="let item of lista" (click)="itemSelected(item)">
+            <ion-icon name="paw" item-start [ngStyle] = "{'color': item.color}" ></ion-icon>
+            {{ item.titulo }}
+          </button>  
+      
+        </ion-list>
+      </ion-card>
 </ion-content>

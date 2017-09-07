@@ -1,14 +1,6 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>Inicio</ion-title>
-  </ion-navbar>
-</ion-header>
-
-<ion-content padding>
-  <h3>Bienvenidos a Ionic</h3>
-
-    <ion-navbar>
-      <ion-buttons start>
+  <ion-navbar color = "secondary">
+    <ion-buttons start>
         <button ion-button icon-only>
           <ion-icon name="contact"></ion-icon>
         </button>
@@ -19,15 +11,11 @@
           <ion-icon name="search"></ion-icon>
         </button>
       </ion-buttons>
-    </ion-navbar>
-  
-  <ion-list>
-    <ion-item>
-      Left Icon Button
-      <button ion-button outline item-end icon-left>
-        <ion-icon name="star"></ion-icon>
-        Left Icon
-      </button>
-    </ion-item>
-  </ion-list>
+    <ion-title>Inicio</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <button ion-button block color = 'dark' (click) = 'alerta()'>Alerta</button>
+  <button ion-button block color = 'dark' (click) = 'alerta2()'>Alerta 2</button>
 </ion-content>
