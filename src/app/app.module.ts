@@ -9,9 +9,18 @@ import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { YoutubePage } from '../pages/youtube/youtube';
 import { MasinfoPageModule } from '../pages/masinfo/masinfo.module';
+import { LoginPage } from '../pages/login/login';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+
+import { CloudSettings, CloudModule } from '@ionic/cloud-angular';
+
+const cloudSettings: CloudSettings = {
+  'core': {
+    'app_id': '39dc43f9'
+  }
+};
 
 @NgModule({
   declarations: [
@@ -20,12 +29,14 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ContactPage,
     HomePage,
     TabsPage,
-    YoutubePage
+    YoutubePage,
+    LoginPage
   ],
   imports: [
     BrowserModule,
     MasinfoPageModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    CloudModule.forRoot(cloudSettings)
     
   ],
   bootstrap: [IonicApp],
@@ -35,7 +46,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ContactPage,
     HomePage,
     TabsPage,
-    YoutubePage
+    YoutubePage,
+    LoginPage
   ],
   providers: [
     StatusBar,
